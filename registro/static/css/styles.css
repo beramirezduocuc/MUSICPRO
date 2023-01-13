@@ -1,0 +1,30 @@
+:root{
+    --cprincipal:rgb(92,22,160);
+    --csecundario:rgb(142,92,192);
+}
+
+.cl-mr{
+    color:var(--cprincipal)
+}
+
+.cl-mr a:link{
+    color:var(--cprincipal) !important;
+}
+
+.btn-primary{
+    background-color:var(--csecundario)!important;
+}
+
+.btn-primary:hover{
+    background-color:var(--cprincipal)!important;
+}
+
+.navbarImg img{
+    margin-left: 3vh;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
