@@ -12,21 +12,38 @@
 <body>
     {% include 'core/navbar.html' %}
 
-<div class="flex-parent-element">
-    <div class="card inline-block-child" style="width: 18rem;">
-        <img src="{% static 'img/dineroMorado.png' %}" class="card-img-top" alt="...">
-        <div class="card-body inline-block-chil">
-          <p class="card-text">Transferencia Bancaria</p>
-        </div>
-      </div>
+    <div class="container h-100">
+      <div class="row align-items-center">
 
-      <div class="card inline-block-chilt" style="width: 18rem;">
-        <img src="{% static 'img/logo-webpay.png' %}" class="card-img-top" alt="...">
-        <div class="card-body inline-block-chil">
-          <p class="card-text">Credito/Debito</p>
+        <h1 style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; text-align: center; margin-top: 10vh;">Seleccione medio de pago</h1>
+
+        <!--Carta 1-->
+        <div class="col-6">
+          <div class="card" style="text-align:center; width: 21rem; margin-left: 35vh; margin-top: 8vh;">
+            <a href="{% url 'eleccionTransferencia' %}">
+            <img class="card-img-top" src="{% static 'img/dineroMorado.png'%}" alt="Card image cap">
+            <div class="card-body">
+            <h5 class="card-title">Transferencia bancaria</h5>
+            </div>
+          </div>
+        </a>
         </div>
+
+        <!--Carta 2-->
+        <div class="col-6">
+          <div class="card" style="text-align:center; width: 21rem; margin-top: 8vh;">
+            <a href="">
+            <img class="card-img-top" src="{% static 'img/logo-webpay.png' %}" alt="Card image cap">
+            <div class="card-body">
+              <h5 class="card-title">Credito/Debito</h5>
+            </div>
+          </div>
+        </div>
+      </a>
       </div>
+    
     </div>
+
     {% include 'core/footer.html' %}
     
 </body>
