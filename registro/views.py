@@ -23,3 +23,6 @@ def eleccionTransferencia(request):
 
 def transfExitosa(request):
     return render(request, 'ventas/transfExitosa.html')
+
+def productos(request):
+    return render(request, 'ventas/productos.html')
