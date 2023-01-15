@@ -1,0 +1,33 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="{% static 'css/stylesVenta.css' %}">
+
+
+
+    <div class="anc">
+        <div class="content">
+        <h5 class="titulo-transf">¿Como pagar?</h5>
+        <p>
+            <strong>1.-</strong> Transfiere a la siguiente cuenta:<br>
+            Banco: Banco de chile <br>
+            Tipo de cuenta: Cuenta vista <br>
+            Numero de cuenta: 284561027 <br>
+            Nombre: Elvis cocho <br>
+            <strong>2.-</strong> Envia un pantallazo de la transferencia al numero + 56 9 4328 1239 <br>
+            <strong>3.-</strong> Espera a que uno de nuestros empleados atienda y verifique tu pedido
+        </p>
+    </div>
+</div>
+
+<script>
+    setTimeout(function(){
+        window.location.href = "{% url 'tExitosa' %}";
+    }, 5000);
+</script>
+
+
+{% endblock %}
+
+
+

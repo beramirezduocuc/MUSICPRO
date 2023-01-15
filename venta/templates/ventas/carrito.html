@@ -1,0 +1,66 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+
+<link rel="stylesheet" href="{% static 'css/stylesVenta.css'%}">
+
+<h2 class="tituloCarro">Carrito de compras</h2>
+<br />
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Subtotal</th>
+                <th scope="col"></th>
+            </tr>
+        </thead>
+    <tbody>
+        <tr>
+            <th scope="row">Bajo</th>
+                <td>$ 33</td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <p class="cantidad">44</p>
+                    </div>
+                </td>
+                <td>
+                    <div class="d-flex align-items-center">
+                        <p class="cantidad">44</p>
+                    </div>
+                </td>
+                 <td>
+                    <button type="button" class="eliminar">
+                       Eliminar
+                    </button>
+                </td>
+        </tr>
+            <tfoot>
+                <tr>
+                    <td>Total:</td>
+                    <td>$ 100</td>
+                </tr>
+                
+            </tfoot>
+    </tbody>
+    </table>
+    <div class="d-flex justify-content-between">
+        <button type="button" class="btn btn-success">
+            <i class="fa-solid fa-arrow-left"></i> Volver
+        </button>
+
+        <a href="{% url 'login' %}"><button type="button" class="btn btn btn-success">Comprar</button></a>
+    </div>
+
+</div>
+<br />
+<br />
+
+
+
+
+
+{% endblock %}
