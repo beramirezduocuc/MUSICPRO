@@ -12,17 +12,4 @@ def registro(request):
 def ToS(request):
     return render(request, "registro/ToS.html")
 
-def inicio(request):
-    return render(request, "core/inicio.html")    
 
-def medioPago(request):
-    return render(request, 'ventas/medioPago.html')
-
-def eleccionTransferencia(request):
-    return render(request,'ventas/eleccionTransferencia.html')
-
-def transfExitosa(request):
-    return render(request, 'ventas/transfExitosa.html')
-
-def productos(request):
-    return render(request, 'ventas/productos.html')
