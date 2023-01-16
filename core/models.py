@@ -43,6 +43,8 @@ class Devoluciones(models.Model):
 class Categoria(models.Model):
     ID_categoria = models.AutoField(primary_key=True)
     Nombre_categoria = models.CharField(max_length=30)
+    def _str_(self):
+        return self.Nombre_categoria
 
 
 class Clase(models.Model):
@@ -53,10 +55,10 @@ class Clase(models.Model):
 
 class Producto(models.Model):
     ID_producto = models.AutoField(primary_key=True)
-    Nombre = models.CharField(max_length=30)
+    Nombre = models.CharField(max_length=70)
     Categoria = models.CharField(max_length=30)
-    Descripcion = models.CharField(max_length=40)
-    Modelo = models.CharField(max_length=30)
+    Descripcion = models.CharField(max_length=10000)
+    Modelo = models.CharField(max_length=300)
     Precio = models.IntegerField()
     Cantidad = models.IntegerField()
     ID_Clase = models.ForeignKey(Clase, on_delete=models.CASCADE)
