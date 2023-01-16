@@ -5,18 +5,19 @@
 {% block content %}
 
 <!-- inicio productos -->
-<h2>Productos</h2> 
-{% for i in productos %}
-<div class="Productos">
-    <div class="producto">
-        <div class="contenedor_producto">
-            <div class="detalle">
-
-            </div>
-        </div>
-
+<div class="cl-mr">
+    
+    <h1 class="tituloCarro" style="color: white; margin-bottom: 5%;">Productos</h1>
+    <div class="ordenProd">
+    {% for i in productos %}
+   
+    <div class="cartaProducto">
+        <img class="fotoProducto" src="{% static 'img/bajo.jpg' %}">
+        <p class="tituloProducto"><b>Bajo Electrico</b></p>
     </div>
-</div>
 
+    {% endfor %}
+</div>
+</div>
 
 {% endblock %}
