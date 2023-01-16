@@ -1,5 +1,5 @@
 from django.contrib import admin
-from core.models import *
+from .models import *
 
 admin.site.register(Tipos_Empleados)
 admin.site.register(Empleado)
