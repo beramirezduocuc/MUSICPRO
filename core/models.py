@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class Tipos_Empleados(models.Model):
     ID_tipo_emp = models.AutoField(primary_key=True)
     Nombre = models.CharField(max_length=30)
@@ -43,7 +42,8 @@ class Devoluciones(models.Model):
 class Categoria(models.Model):
     ID_categoria = models.AutoField(primary_key=True)
     Nombre_categoria = models.CharField(max_length=30)
-
+    def __str__(self):
+        return self.Nombre_categoria
 
 class Clase(models.Model):
     ID_compras = models.AutoField(primary_key=True)

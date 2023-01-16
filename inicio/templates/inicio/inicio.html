@@ -1,0 +1,31 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="cl-mr fondo-inicio">
+    <img src="{% static 'img/instrumentos-A.png'%}" class="instrumentosInicio">
+
+<div class="textoInicio">  
+
+    <h1 class="textoInicio">
+        Musicpro
+    </h1>
+    <p>Comienza a comprar ya en nuestra nueva<br>
+    Tienda Online</p>
+    <a href="{% url 'venta:productos'%}">
+    <button class="btn-inicio">Compra ya</button>
+</a>
+    <br>
+    <br>
+    <p>O</p>
+    <p>Inicia sesion para obtener descuentos<br>
+    Exclusivos</p>
+    <a href="{% url 'login:login'%}">
+    <button class="btn-inicio">Iniciar Sesion</button>
+</a>
+</div>
+
+</div>
+
+{% endblock %}

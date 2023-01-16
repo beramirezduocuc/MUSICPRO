@@ -36,9 +36,11 @@
                 </div>
       
                 <div class="text-center text-lg-start mt-4 pt-2">
-                  <button type="button" class="btn btn-primary btn-lg btn-outline-* cl-mr"
-                    style="padding-left: 2.5rem; padding-right: 2.5rem;">Ingresar</button>
-                  <p class="small fw-bold mt-2 pt-1 mb-0">¿No tienes cuenta? <a href="{% url 'registro' %}">Registrate</a></p>
+                  <a href="{% url 'inicio:inicio' %}">
+                  <button type="button" class="btn-inicio"
+                    style="margin-left: 0%;">Ingresar</button>
+                  </a>
+                  <p class="small fw-bold mt-2 pt-1 mb-0">¿No tienes cuenta? <a href="{% url 'login:registro' %}">Registrate</a></p>
                 </div>
                 
             </form>

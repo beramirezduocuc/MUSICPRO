@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'registro',
     'core',
     'venta',
+    'inicio',
 
 ]
 
