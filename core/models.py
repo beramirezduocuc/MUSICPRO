@@ -81,9 +81,9 @@ class Clase(models.Model):
 
 class Producto(models.Model):
     ID_producto = models.AutoField(primary_key=True)
-    Nombre = models.CharField(max_length=30)
+    Nombre = models.CharField(max_length=100)
     Categoria = models.CharField(max_length=30)
-    Descripcion = models.CharField(max_length=40)
+    Descripcion = models.CharField(max_length=1000)
     Modelo = models.CharField(max_length=30)
     Precio = models.IntegerField()
     Cantidad = models.IntegerField()
