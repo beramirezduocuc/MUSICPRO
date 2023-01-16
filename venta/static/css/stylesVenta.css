@@ -9,25 +9,26 @@
    border: 2px solid rgb(51, 51, 40);
 }
    
-   .titulo-transf{
-   margin-top: 3%;
-   }
-/* Carrito */
+.titulo-transf{
+margin-top: 3%;
+}
 
 .tituloCarro {
+   font-family: 'Montserrat', sans-serif;
    text-align: center;
    display: flex;
    align-items: center;
    justify-content: center;
 }
 
+
 .tabla-carrito {
-   margin: 0 auto; /* centra la tabla horizontalmente */
-   width: 80%; /* define el ancho de la tabla */
+   margin: 0 auto; 
+   width: 80%;
 }
 
 .content{
-   flex-grow: 1; /* ocupa todo el espacio disponible entre el header y el footer */
+   flex-grow: 1;
 }
 
 .card-container {
@@ -35,11 +36,15 @@
    justify-content: center;
    align-items: center;
    margin-top: 2%;
-   margin-bottom: 10%; /* para que ocupe toda la pantalla */
+   margin-bottom: 10%;
  }
  
  .card {
    background-color: rgb(223, 179, 238);
    padding: 1rem;
-   color: white; /* o cualquier otro color contrastante */
+   color: white; 
  }
+
+
+
+

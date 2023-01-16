@@ -2,8 +2,7 @@
 {% load static %}
 {% block content %}
 
-
-<link rel="stylesheet" href="{% static 'css/stylesVenta.css'%}">
+<link rel="stylesheet" href="{% static 'css/stylesVenta.css' %}">
 
 <h2 class="tituloCarro">Carrito de compras</h2>
 <br />
@@ -33,7 +32,7 @@
                     </div>
                 </td>
                  <td>
-                    <button type="button" class="eliminar">
+                    <button type="button" class="btn-inicio" style="margin-left: 70%;">
                        Eliminar
                     </button>
                 </td>
@@ -48,11 +47,13 @@
     </tbody>
     </table>
     <div class="d-flex justify-content-between">
-        <button type="button" class="btn btn-success">
-            <i class="fa-solid fa-arrow-left"></i> Volver
+        <button type="button" class="btn-inicio" style="margin-left:0%;">
+            <i class="fa-solid fa-arrow-left"></i>Volver
         </button>
 
-        <a href="{% url 'login' %}"><button type="button" class="btn btn btn-success">Comprar</button></a>
+        <a href="{% url 'venta:medioPago' %}">
+            <button class="btn-inicio">Comprar</button>
+        </a>    
     </div>
 
 </div>

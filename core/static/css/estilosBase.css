@@ -16,9 +16,102 @@
     color:aliceblue;
 }
 
+
 body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+}
+
+
+.navbarImg{
+    color: white;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-link-white {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    color: rgb(198, 198, 198);
+    text-decoration: none;
+}
+
+.imgNav{
+    width:40;
+    margin-left: 3vh;
+    height:40; 
+}
+
+#contact {
+    border: 1px solid gray;
+    padding: 2%;
+    text-align: center;
+  }
+  #contact h2 {
+    margin-bottom: 3%;
+  }
+  #contact a {
+    color: blue;
+    text-decoration: none;
+  }
+
+.fondo-inicio{
+    height:86.2%; 
+    width: 100%;
+}
+
+.textoInicio {
+    text-align: left;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
 
 }
+
+.textoInicio h1{
+    margin-top: 6%;
+    margin-left:7%;
+    letter-spacing: 9px;
+    margin-bottom: 10%;
+}
+
+.textoInicio p{
+    margin-left: 7%;
+}
+.btn-inicio {
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(92,22,160);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    border: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 16px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    margin-left: 7%;
+  }
+
+.btn-inicio:hover {
+    background-color: white;
+    color: rgb(92,22,160);
+    cursor: pointer;
+}
+
+.instrumentosInicio {
+    position: absolute;
+    top: 50%; /* centra verticalmente */
+    right: 0; /* ubica a la derecha */
+    transform: translateY(-50%); /* mueve la imagen hacia arriba para centrar verticalmente */
+    width: 50%;
+    height: 80%;
+    margin-right: 10%;
+}
+
