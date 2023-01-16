@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+
 def medioPago(request):
     return render(request, 'ventas/medioPago.html')
 
@@ -11,6 +12,9 @@ def transfExitosa(request):
 
 def productos(request):
     return render(request, 'ventas/productos.html')
+ 
 
 def carrito(request):
     return render(request, 'ventas/carrito.html')
+
+

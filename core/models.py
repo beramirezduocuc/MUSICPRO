@@ -88,6 +88,7 @@ class Producto(models.Model):
     Precio = models.IntegerField()
     Cantidad = models.IntegerField()
     ID_Clase = models.ForeignKey(Clase, on_delete=models.CASCADE)
+    Imagen_Producto = models.ImageField(upload_to="producto", null=True)
 
     def __str__(self):
         return self.Nombre
