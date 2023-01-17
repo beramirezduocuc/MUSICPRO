@@ -2,7 +2,10 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/stylesVenta.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/stylesVenta.css'%}">
+
+
 
 <h2 class="tituloCarro">Carrito de compras</h2>
 <br />
@@ -17,35 +20,40 @@
                 <th scope="col"></th>
             </tr>
         </thead>
-    <tbody>
         
+{% for key,calue in request.session.carro.items %}
+
+    <tbody>
         <tr>
-            <th scope="row">Bajo</th>
-                <td>$ 33</td>
+            <th scope="row"> </th> <!--Nombre Prod-->
+                <td> </td> <!--Precio-->
                 <td>
                     <div class="d-flex align-items-center">
-                        <p class="cantidad">44</p>
+                        <p class="cantidad"> </p> <!--Cantidad-->
                     </div>
                 </td>
                 <td>
                     <div class="d-flex align-items-center">
-                        <p class="cantidad">44</p>
+                        <p class="cantidad"> </p> <!--Subtotal-->
                     </div>
                 </td>
-                 <td>
+                <td>
                     <button type="button" class="btn-inicio" style="margin-left: 70%;">
                        Eliminar
                     </button>
                 </td>
+                
         </tr>
             <tfoot>
                 <tr>
-                    <td>Total:</td>
-                    <td>$ 100</td>
+                    <td>Total:</td> 
+                    <td>{{importe_total_carro}}</td> <!--Total (Numero)-->
                 </tr>
                 
             </tfoot>
     </tbody>
+    {% endfor %}
+
     </table>
     <div class="d-flex justify-content-between">
         <button type="button" class="btn-inicio" style="margin-left:0%;">
@@ -55,11 +63,12 @@
         <a href="{% url 'venta:medioPago' %}">
             <button class="btn-inicio">Comprar</button>
         </a>    
-    </div>
 
 </div>
-<br />
-<br />
+
+
+
+</div>
 
 
 

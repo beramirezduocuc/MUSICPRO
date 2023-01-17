@@ -11,7 +11,7 @@ def transfExitosa(request):
     return render(request, 'ventas/transfExitosa.html')
 
 def productos(request):
-    productos = Producto.objects.all
+    productos = Producto.objects.all()
     data = { 
         'productos': productos
     }
