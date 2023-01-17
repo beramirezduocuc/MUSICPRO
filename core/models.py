@@ -108,5 +108,3 @@ class Tienda(models.Model):
 
 
 
-
-

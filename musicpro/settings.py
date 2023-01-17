@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'venta',
     'inicio',
     'carro',
+    'api',
+    'rest_framework',
 
 ]
 

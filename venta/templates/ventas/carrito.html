@@ -21,30 +21,34 @@
             </tr>
         </thead>
         
-{% for key,calue in request.session.carro.items %}
+{% for key, value in request.session.carro.items %}
 
     <tbody>
         <tr>
-            <th scope="row"> </th> <!--Nombre Prod-->
-                <td> </td> <!--Precio-->
+            <th scope="row">{{value.nombre}}</th> <!--Nombre Prod-->
+                <td>{{value.precio}}</td> <!--Precio-->
                 <td>
                     <div class="d-flex align-items-center">
-                        <p class="cantidad"> </p> <!--Cantidad-->
+                        <p class="cantidad">{{value.cantidad}}</p> <!--Cantidad-->
                     </div>
                 </td>
                 <td>
                     <div class="d-flex align-items-center">
-                        <p class="cantidad"> </p> <!--Subtotal-->
+                        <p class="cantidad">{{ value.subtotal }}</p> <!--Subtotal-->
                     </div>
                 </td>
                 <td>
+                    <a href="{% url 'carro:eliminar' value.producto_id %}">
                     <button type="button" class="btn-inicio" style="margin-left: 70%;">
                        Eliminar
                     </button>
+                </a>
                 </td>
                 
         </tr>
+        {% endfor %}
             <tfoot>
+             
                 <tr>
                     <td>Total:</td> 
                     <td>{{importe_total_carro}}</td> <!--Total (Numero)-->
@@ -52,14 +56,16 @@
                 
             </tfoot>
     </tbody>
-    {% endfor %}
+ 
 
     </table>
     <div class="d-flex justify-content-between">
+        <a href="{% url 'venta:productos' %}">
         <button type="button" class="btn-inicio" style="margin-left:0%;">
             <i class="fa-solid fa-arrow-left"></i>Volver
-        </button>
 
+        </button>
+    </a>  
         <a href="{% url 'venta:medioPago' %}">
             <button class="btn-inicio">Comprar</button>
         </a>    

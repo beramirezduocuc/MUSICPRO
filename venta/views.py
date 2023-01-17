@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from core.models import Producto
+import requests
+import pandas as pd
 
 def medioPago(request):
     return render(request, 'ventas/medioPago.html')
@@ -19,6 +21,8 @@ def productos(request):
    
 
 def carrito(request):
+
     return render(request, 'ventas/carrito.html')
+    
 
 
