@@ -2,7 +2,10 @@
 {% load static %}
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/stylesVenta.css' %}">
+
+<link rel="stylesheet" href="{% static 'css/stylesVenta.css'%}">
+
+
 
 <h2 class="tituloCarro">Carrito de compras</h2>
 <br />
@@ -17,49 +20,61 @@
                 <th scope="col"></th>
             </tr>
         </thead>
-    <tbody>
         
+{% for key, value in request.session.carro.items %}
+
+    <tbody>
         <tr>
-            <th scope="row">Bajo</th>
-                <td>$ 33</td>
+            <th scope="row">{{value.nombre}}</th> <!--Nombre Prod-->
+                <td>{{value.precio}}</td> <!--Precio-->
                 <td>
                     <div class="d-flex align-items-center">
-                        <p class="cantidad">44</p>
+                        <p class="cantidad">{{value.cantidad}}</p> <!--Cantidad-->
                     </div>
                 </td>
                 <td>
                     <div class="d-flex align-items-center">
-                        <p class="cantidad">44</p>
+                        <p class="cantidad">{{ value.subtotal }}</p> <!--Subtotal-->
                     </div>
                 </td>
-                 <td>
+                <td>
+                    <a href="{% url 'carro:eliminar' value.producto_id %}">
                     <button type="button" class="btn-inicio" style="margin-left: 70%;">
                        Eliminar
                     </button>
+                </a>
                 </td>
+                
         </tr>
+        {% endfor %}
             <tfoot>
+             
                 <tr>
-                    <td>Total:</td>
-                    <td>$ 100</td>
+                    <td>Total:</td> 
+                    <td>{{importe_total_carro}}</td> <!--Total (Numero)-->
                 </tr>
                 
             </tfoot>
     </tbody>
+ 
+
     </table>
     <div class="d-flex justify-content-between">
+        <a href="{% url 'venta:productos' %}">
         <button type="button" class="btn-inicio" style="margin-left:0%;">
             <i class="fa-solid fa-arrow-left"></i>Volver
-        </button>
 
+        </button>
+    </a>  
         <a href="{% url 'venta:medioPago' %}">
             <button class="btn-inicio">Comprar</button>
         </a>    
-    </div>
 
 </div>
-<br />
-<br />
+
+
+
+</div>
 
 
 
