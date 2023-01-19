@@ -4,42 +4,20 @@
 
 {% block content %}
 
-<div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-3">
-        <div class="columna">
-            <div class="imagen">
-                <img src="{% static 'img/dineroMorado.png' %} " alt="">
-            </div>
-            <div class="descripcion">
-                <h5>
-                   Bajo <!-- {{ i.nombreProducto }}}-->
-                </h5>
-                <p>
-                    Bajo electrico<!--{{ i.descripcion }}-->
-                </p>
-                <div class="uno">
-                </div>
-                <div class="precios">
-                    <p>Precio:$1000 <!--${{ i.precio }}--></p>
-                    <p>Stock: 2  <!--${{ i.stock }}--></p>
-                </div>
-                <div class="anadir">
-                    <button
-                    data-product="{{ i.id }}"
-                    data-action="add"
-                    type="submit"
-                    class="actualizar-carrito"
-                >
-                
-                    Añadir
-                    </button>
-                </div>
-            </div>
-        </div>
+<!-- inicio productos -->
+<div class="cl-mr">
+    
+    <h1 class="tituloCarro" style="color: white; margin-bottom: 5%;">Productos</h1>
+    <div class="ordenProd">
+    {% for i in productos %}
+   
+    <div class="cartaProducto">
+        <img class="fotoProducto" src="{% static 'img/bajo.jpg' %}">
+        <p class="tituloProducto"><b>Bajo Electrico</b></p>
     </div>
 
+    {% endfor %}
+</div>
+</div>
 
-</div>
-</div>
-<br>
-<br>
 {% endblock %}
