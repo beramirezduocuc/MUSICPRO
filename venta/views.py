@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from core.models import Producto
-from transbank import Webpay
+#from transbank import Webpay
 
 
 def medioPago(request):
@@ -18,7 +18,7 @@ def productos(request):
         'productos': productos
     }
     return render(request, 'ventas/productos.html', data)
-   
+
 
 def carrito(request):
 
