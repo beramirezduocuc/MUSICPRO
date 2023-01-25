@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'carro',
     'api',
     'rest_framework',
-
+    'integracion_tbk'
 ]
 
 MIDDLEWARE = [
