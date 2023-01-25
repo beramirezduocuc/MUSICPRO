@@ -1,5 +1,5 @@
 from django.contrib import admin
-from django.urls import path, include
+from django.urls import path, include, re_path
 from inicio import views
 from django.conf.urls.static import static
 from django.conf import settings
@@ -12,8 +12,10 @@ urlpatterns = [
     path('venta/', include(('venta.urls', 'venta'), namespace='venta')),
     path('inicio/', include(('inicio.urls', 'inicio'), namespace='inicio')),
     path('carro/', include('carro.urls')),
+    re_path('integracion_tbk/',include('integracion_tbk.urls')),
     path('productos/buscar/<str:nombre>', apiviews.buscar_producto),
-    ]
+]
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
