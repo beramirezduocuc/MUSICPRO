@@ -63,19 +63,26 @@
         <a href="{% url 'venta:productos' %}">
         <button type="button" class="btn-inicio" style="margin-left:0%;">
             <i class="fa-solid fa-arrow-left"></i>Volver
-
         </button>
+        <form method="post" action="{% url 'venta:transbank' %}">
+            {% csrf_token %}
+            <input type="hidden" name="amount" value="{{importe_total_carro}}">
+        </form> 
     </a>  
+
         <a href="{% url 'venta:medioPago' %}">
-            <button class="btn-inicio">Comprar</button>
+            <button class="btn-inicio">Comprar</button> 
         </a>    
 
-</div>
+      
 
 
 
 </div>
 
+
+
+</div>
 
 
 

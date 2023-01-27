@@ -12,7 +12,6 @@ urlpatterns = [
     path('venta/', include(('venta.urls', 'venta'), namespace='venta')),
     path('inicio/', include(('inicio.urls', 'inicio'), namespace='inicio')),
     path('carro/', include('carro.urls')),
-    re_path('integracion_tbk/',include('integracion_tbk.urls')),
     path('productos/buscar/<str:nombre>', apiviews.buscar_producto),
 ]
 
