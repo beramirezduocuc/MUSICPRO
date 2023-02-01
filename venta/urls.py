@@ -7,5 +7,6 @@ path('transferencia/', v_venta.eleccionTransferencia, name='eleccionTransferenci
 path('transfExitosa/', v_venta.transfExitosa, name='tExitosa'),
 path('productos/', v_venta.productos, name='productos'),
 path('carrito/', v_venta.carrito, name='carrito'),
+#path('transbank/', v_venta.crearTransaccion, name='transbank')
 
 ]
